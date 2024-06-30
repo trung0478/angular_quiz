@@ -1,0 +1,44 @@
+<style>
+    .box_search {
+        display: none !important;
+    }
+
+    .header.banner {
+        height: 0 !important;
+        margin-bottom: 7%;
+    }
+</style>
+
+<div class="row">
+    <div class="col-lg-6 col-12">
+        <div class="bg_wrapper">
+            <img class="w-100" style="height: 86vh;"
+                src="https://vcdn1-giadinh.vnecdn.net/2014/08/04/FPT-02-perspective-1407125626.jpg?w=1200&h=0&q=100&dpr=1&fit=crop&s=umjagvDi9Hops3kRqAvW0w"
+                alt="">
+            <img class="bg_logo w-50" src="/images/logo.png" alt="">
+        </div>
+    </div>
+
+    <div class="col-lg-6 col-12">
+        <div class="mt-5 px-5">
+            <div class="mb-4">
+                <p class="fs-2 text-danger">Quên mật khẩu</p>
+            </div>
+
+            <form name="form">
+                <label for="">Tên đăng nhập</label>
+                <input name="username" ng-required="true" ng-model="username" type="text" placeholder="Tên đăng nhập"
+                    class="bg-body-secondary border-0 rounded-3 px-4 py-3 fs-6 w-100 mt-3 mb-2">
+                <p class="mb-3 form_error" ng-show="form.username.$error.required && form.username.$dirty">Vui lòng nhập tên đăng nhập</p>
+
+                <label for="" class="mt-3">Email</label>
+                <input name="email" ng-required="true" ng-model="email" type="text" placeholder="Email"
+                    class="bg-body-secondary border-0 rounded-3 px-4 py-3 fs-6 w-100 mb-2 mt-3">
+                <p class="mb-3 form_error" ng-show="form.email.$error.required && form.email.$dirty">Vui lòng nhập mật khẩu</p>
+
+                <button ng-click="getPass()" ng-disabled="form.$invalid" class="btn btn-danger my-3 rounded-3 py-3 w-100">Lấy lại mật khẩu</button>
+            </form>
+
+        </div>
+    </div>
+</div>

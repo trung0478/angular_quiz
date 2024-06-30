@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polytest</title>
+    <!-- ICON -->
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <!-- LINKS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- LINK FONT-TEXT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- LINK JS -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/app/main.js"></script>
+    <script src="js/app/test_quizCtrl.js"></script>
+    <script src="js/app/homeCtrl.js"></script>
+    <script src="js/app/catalogCtrl.js"></script>
+    <script src="js/app/detailCtrl.js"></script>
+    <script src="js/app/info_personalCtrl.js"></script>
+    <script src="js/app/loginCtrl.js"></script>
+    <script src="js/app/registerCtrl.js"></script>
+    <script src="js/app/forget_passCtrl.js"></script>
+    <script src="js/app/change_passCtrl.js"></script>
+    
+</head>
+
+<body ng-app="app">
+
+    <div class="container-fluid">
+        <header>
+            <div class="header banner">
+                <nav class="navbar navbar-expand-lg header_nav">
+                    <div class="container-fluid">
+                        <a href="#/">
+                            <img width="200px" height="90px" src="images/logo.png" alt="">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse w-100" id="navbarNavAltMarkup">
+                            <div class="navbar-nav mx-auto">
+                                <a class="nav-link active mx-4 fs-5 btn_menu btn_menu_border" aria-current="page"
+                                    href="#/">Trang
+                                    chủ</a>
+                                <a class="nav-link active mx-4 fs-5 btn_menu btn_menu_border" href="#/catalog">Danh
+                                    mục</a>
+                                <a class="nav-link active mx-4 fs-5 btn_menu btn_menu_border" href="#/introduce">Giới
+                                    thiệu</a>
+                                <a class="nav-link active mx-4 fs-5 btn_menu btn_menu_border " href="#/contact">Liên
+                                    hệ</a>
+                                <a class="nav-link active mx-4 fs-5 btn_menu btn_menu_border " href="#/q&a_feedback">Hỏi
+                                    đáp & góp ý</a>
+    
+                                <li style="margin-left: 50px;" class="nav-item dropdown  btn_menu">
+                                    <a class="nav-link active dropdown-toggle icon_user" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-person-circle fs-5"></i> 
+                                        <span class="fs-5" ng-if="currentUser">{{currentUser.fullname}}</span>
+                                        <span class="fs-5" ng-hide="currentUser">Tài khoản</span>
+                                    </a>
+    
+                                    <ul class="dropdown-menu p-2" >
+                                        <li ng-if="currentUser"><a class="dropdown-item fs-5 btn_menu my-1" ng-click="InfoPerson(currentUser.id)" >Thông tin
+                                                cá nhân</a></li>
+                                        <li ng-if="currentUser"><a class="dropdown-item fs-5 btn_menu my-1" href="#/change_pass">Đổi mật
+                                                khẩu</a></li>
+                                        <li ng-if="currentUser">
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li ng-if="currentUser"><a style="cursor: pointer ;" class="dropdown-item fs-5 btn_menu" ng-click="logOut()">Đăng xuất</a></li>
+                                        <li ng-hide="currentUser" class="dropdown-item fs-5">Đăng nhập để xem thêm thông tin!</li>
+                                    </ul>
+
+                                    
+                                </li>
+    
+                                <a class="nav-link active fs-5  btn_menu register" href="#/register">Đăng ký</a>
+                                <a class="nav-link active fs-5  btn_menu" href="#/login">Đăng nhập</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="d-flex justify-content-center box_search w-100">
+                <form action="" class="form-search w-25">
+                    <input class="w-100 border border-light-subtle px-3 py-3 rounded" type="text"
+                        placeholder="Tìm kiếm ...">
+                    <button><i class="bi bi-search-heart"></i></button>
+                </form>
+            </div>
+        </header>
+
+        <main>
+            <div ng-view></div>
+        </main>
+
+        <footer class="px-5 pt-5 pb-3">
+            <div class="container row">
+                <div class="col-lg-3">
+                    <h4 class="fs-5">Giới thiệu</h4>
+                    <div class="my-4">
+                        <p class="fs-6 my-3">Giới thiệu về Polytest</p>
+                        <p class="fs-6 my-3">Tuyển dụng</p>
+                        <p class="fs-6 my-3">Quảng cáo trên Polytest</p>
+                        <p class="fs-6 my-3">Tải ứng dụng</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4 class="fs-5">Tài nguyên</h4>
+                    <div class="my-4">
+                        <p class="fs-6 my-3">Trung tâm hỗ trợ</p>
+                        <p class="fs-6 my-3">Nguyên tắc cộng đồng</p>
+                        <p class="fs-6 my-3">Điều khoản</p>
+                        <p class="fs-6 my-3">Quyền riêng tư</p>
+                        <p class="fs-6 my-3">Chính sách quảng cáo và cookie</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4 class="fs-5">Ngôn ngữ</h4>
+                    <div class="my-4">
+                        <p class="fs-6 my-3">Tiếng Việt</p>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h4 class="fs-5">Tài nguyên</h4>
+                    <div class="my-4">
+                        <p class="fs-6 my-3">Trung tâm hỗ trợ</p>
+                        <p class="fs-6 my-3">Nguyên tắc cộng đồng</p>
+                        <p class="fs-6 my-3">Điều khoản</p>
+                        <p class="fs-6 my-3">Quyền riêng tư</p>
+                        <p class="fs-6 my-3">Chính sách quảng cáo và cookie</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+                <span class="fs-6">©2024 Polytest</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

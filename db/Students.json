@@ -1,0 +1,70 @@
+{
+  "Students": [
+    {
+      "id": 1,
+      "username": "teonv123",
+      "password": "123456",
+      "fullname": "Nguyễn Văn Tèo 12345",
+      "email": "teonv@fpt.edu.vn",
+      "gender": "true",
+      "birthday": "10-11-1985",
+      "schoolfee": "2500000",
+      "marks": "0"
+    },
+    {
+      "id": 2,
+      "username": "pheonv",
+      "password": "124567rr",
+      "fullname": "Nguyễn Văn Chí Phèo 1234",
+      "email": "pheonv@fpt.edu.vn",
+      "gender": "true",
+      "birthday": "20-10-2000",
+      "schoolfee": "2500000",
+      "marks": "0"
+    },
+    {
+      "id": 3,
+      "username": "nopt123",
+      "password": "iloveyou",
+      "fullname": "Phạm Thị Nở",
+      "email": "nopt@fpt.edu.vn",
+      "gender": "false",
+      "birthday": "05-15-1993",
+      "schoolfee": "2000000",
+      "marks": "0"
+    },
+    {
+      "gender": "true",
+      "marks": 0,
+      "fullname": "Đặng Quốc Trung",
+      "username": "trung0478",
+      "email": "trung123@gmail.com",
+      "birthday": "12-12-2000",
+      "password": "iloveyou",
+      "schoolfee": 10000013,
+      "id": 4
+    },
+    {
+      "gender": "false",
+      "marks": 0,
+      "fullname": "nguyen van a 1234",
+      "username": "anv123",
+      "email": "fpoly.tutorial@gmail.com",
+      "birthday": "10-12-2000",
+      "password": "iloveyou",
+      "schoolfee": 20000000,
+      "id": 5
+    },
+    {
+      "gender": "false",
+      "marks": 0,
+      "fullname": "nguyen van a 1234",
+      "username": "anv1234",
+      "email": "fpoly.tutorial@gmail.com",
+      "birthday": "10-12-2000",
+      "password": "777777",
+      "schoolfee": 20000011,
+      "id": 6
+    }
+  ]
+}

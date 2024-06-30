@@ -1,0 +1,78 @@
+<style>
+    .box_search {
+        display: none !important;
+    }
+
+    .header.banner {
+        height: 0 !important;
+        margin-bottom: 10%;
+    }
+</style>
+<div class="container my-5">
+    <div class="quiz_title_wrapper mb-5">
+        <!-- <p class="hr my-2"></p> -->
+        <div class="quiz_title d-flex">
+            <h2 class="fs-2 text-black-25 fw-bold"> Bài kiểm tra:</h2>
+            <h2 class="fs-2 text-danger fw-bold mx-2">{{subject.Name}}</h2>
+        </div>
+    </div>
+
+    <div style="margin-top: 100px;" class="row">
+        <div class="col-lg-5 px-5">
+            <div class="box_hoiCham border-2 rounded-4 shadow bg-white">
+                <img class="hoiCham w-75" src="images/hoicham.png" alt="">
+                <h3 style="padding:136px 0 10px 0;" class="fs-2 text-center text-danger fw-bold">{{questions.length}}
+                    CÂU HỎI</h3>
+                <div class="d-flex justify-content-center pb-3">
+                    <img class="w-50 text-center" src="images/logos/{{subject.Logo}}" alt="">
+                </div>
+                <div class="d-flex justify-content-center pb-4">
+                    <button ng-click="test()" class="btn btn-danger px-5 fs-5">Kiểm tra </button>
+                    <!-- data-bs-toggle="modal" data-bs-target="#exampleModal" -->
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7 px-5">
+            <div style="margin-left:60px;" class="box_detail1 pt-3 px-5 shadow">
+                <div>
+                    <p class="fs-3 text-white">Bài kiểm tra</p>
+                    <ul class="my-3 ">
+                        <div class="d-flex align-items-center my-2 text-white">
+                            <i class="bi bi-patch-question-fill fs-5"></i>
+                            <li class="fs-4 text-white mx-2"> {{questions.length}} câu hỏi</li>
+                        </div>
+                        <div class="d-flex align-items-center my-2 text-white">
+                            <i class="bi bi-stopwatch-fill fs-5"></i>
+                            <li class="fs-4 text-white mx-2"> 15 phút làm bài</li>
+                        </div>
+                        <div class="d-flex align-items-center my-2 text-white">
+                            <i class="bi bi-patch-check-fill fs-5"></i>
+                            <li class="fs-4 text-white mx-2"> Mỗi câu hỏi lựa chọn 1 câu trả lời đúng nhất</li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="box_detail_corner_right"></div>
+            </div>
+
+            <div style="margin-right:60px;" class="box_detail2 my-4 pt-3 px-5 shadow">
+                <div>
+                    <p class="fs-3 text-white">Thông tin mô tả</p>
+                    <ul class="mt-3 ">
+                        <div class="d-flex align-items-baseline my-2 text-white">
+                            <i class="bi bi-snow2 fs-5 fw-bold"></i>
+                            <li class="fs-5 text-white lh-sm mx-2">Hãy tham gia vào bài kiểm tra này để xem mình đã biết
+                                được những gì và khám phá những lỗ hổng cần cải thiện.</li>
+                        </div>
+                        <div class="d-flex align-items-baseline my-2 text-white">
+                            <i class="bi bi-snow2 fs-5 fw-bold"></i>
+                            <li class="fs-5 text-white lh-sm mx-2">Bài kiểm tra này sẽ đưa bạn qua một loạt câu hỏi thử
+                                thách kiến thức. Hãy thử sức và xem mình đã trở thành một chuyên gia trong lĩnh vực này
+                                chưa.</li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="box_detail_corner_left"></div>
+            </div>
+        </div>
+    </div>
+</div>

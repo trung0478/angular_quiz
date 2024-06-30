@@ -1,0 +1,131 @@
+<div>
+    <h4 class="my-4 fs-4 text-danger">Bài kiểm tra</h4>
+    <div class="wrapper_quiz row px-4 mt-2">
+        <div ng-repeat="sj in subjects.slice(currentIndex, currentIndex + 8) " class="col-lg-3 col-sm-6 col-12 mb-lg-3 mb-1">
+            <a href="#/detail/{{sj.Id}}" class="text-white text-decoration-none quiz_hover ">
+                <div class="border border-1 border-light-subtle quiz_hover_scale rounded-4 overflow-hidden">
+                    <div class="text-center py-5">
+                        <img class="w-50" style="height: 107.41px;" src="images/logos/{{sj.Logo}}" alt="">
+                    </div>
+
+                    <div class="quiz_title text-center py-3 bg-danger ">
+                        <p>{{sj.Name}}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center ">
+    <div>
+        <button ng-click="prev()" class="btn btn-danger"><i class="bi bi-arrow-left-circle"></i></button>
+        <button ng-click="next()" class="btn btn-danger"><i class="bi bi-arrow-right-circle"></i></i></button>
+    </div>
+</div>
+
+<div class="category_quiz my-5">
+    <div class="row px-5 h-100 ">
+        <div class="col-lg-2 col-sm-4 col-6 my-auto">
+            <a href="" class="category_quiz_item w-100 text-decoration-none text-danger fw-bold fs-5">
+                <div class="category_quiz_img category_quiz_img rounded-circle overflow-hidden d-flex justify-content-center mx-auto"
+                    style="width: 90px; height: 90px;">
+                    <img style="object-fit: cover;" class="w-100 h-100 "
+                        src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190902124355/ruby-programming-language.png"
+                        alt="">
+                </div>
+                <div class="my-3 text-center">
+                    <p>Ruby</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-2 col-sm-4 col-6 my-auto">
+            <a href="" class="category_quiz_item w-100 text-decoration-none text-danger fw-bold fs-5">
+                <div class="category_quiz_img rounded-circle overflow-hidden d-flex justify-content-center mx-auto"
+                    style="width: 90px; height: 90px;">
+                    <img style="object-fit: cover;" class="w-100 h-100 "
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgYTLCdqqIpDRCtutsVLOCGPrOa7Yppw_kCw&usqp=CAU"
+                        alt="">
+                </div>
+                <div class="my-3 text-center">
+                    <p>PHP</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-2 col-sm-4 col-6 my-auto">
+            <a href="" class="category_quiz_item w-100 text-decoration-none text-danger fw-bold fs-5">
+                <div class="category_quiz_img rounded-circle overflow-hidden d-flex justify-content-center mx-auto"
+                    style="width: 90px; height: 90px;">
+                    <img style="object-fit: cover;" class="w-100 h-100 "
+                        src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="">
+                </div>
+                <div class="my-3 text-center">
+                    <p>Javascript</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-2 col-sm-4 col-6 my-auto">
+            <a href="" class="category_quiz_item w-100 text-decoration-none text-danger fw-bold fs-5">
+                <div class="category_quiz_img rounded-circle overflow-hidden d-flex justify-content-center mx-auto"
+                    style="width: 90px; height: 90px;">
+                    <img style="object-fit: cover;" class="w-100 h-100 "
+                        src="https://logowik.com/content/uploads/images/flutter5786.jpg" alt="">
+                </div>
+                <div class="my-3 text-center">
+                    <p>Flutter</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-2 col-sm-4 col-6 my-auto">
+            <a href="" class="category_quiz_item w-100 text-decoration-none text-danger fw-bold fs-5">
+                <div class="category_quiz_img rounded-circle overflow-hidden d-flex justify-content-center mx-auto"
+                    style="width: 90px; height: 90px;">
+                    <img style="object-fit: cover;" class="w-100 h-100 "
+                        src="https://image.shutterstock.com/image-photo/image-260nw-1397241389.jpg" alt="">
+                </div>
+                <div class="my-3 text-center">
+                    <p>Python</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-2 col-sm-4 col-6 my-auto">
+            <a href="" class="category_quiz_item w-100 text-decoration-none text-danger fw-bold fs-5">
+                <div class="category_quiz_img rounded-circle overflow-hidden d-flex justify-content-center mx-auto"
+                    style="width: 90px; height: 90px;">
+                    <img style="object-fit: cover;" class="w-100 h-100 "
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAJS55NI1qjx4cPdOgxhk54qStPDnr8KfPJt8GncI_Ow&s"
+                        alt="">
+                </div>
+                <div class="my-3 text-center">
+                    <p>HTML</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <h4 class="my-4 fs-4 text-danger">Bài kiểm tra</h4>
+    <div class="wrapper_quiz row px-4 mt-2">
+        <div ng-repeat="sj in subjects.slice(currentIndex, currentIndex + 8)" class="col-lg-3 col-sm-6 col-12 mb-lg-3 mb-1">
+            <a href="#/detail/{{sj.Id}}" class="text-white text-decoration-none quiz_hover ">
+                <div class="border border-1 border-light-subtle quiz_hover_scale rounded-4 overflow-hidden">
+                    <div class="text-center py-5">
+                        <img class="w-50" style="height: 107.41px;" src="images/logos/{{sj.Logo}}" alt="">
+                    </div>
+
+                    <div class="quiz_title text-center py-3 bg-danger ">
+                        <p>{{sj.Name}}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center mb-5">
+    <div>
+        <button ng-click="prev()" class="btn btn-danger"><i class="bi bi-arrow-left-circle"></i></button>
+        <button ng-click="next()" class="btn btn-danger"><i class="bi bi-arrow-right-circle"></i></i></button>
+    </div>
+</div>

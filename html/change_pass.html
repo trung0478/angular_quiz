@@ -1,0 +1,30 @@
+<style>
+    .box_search {
+        display: none !important;
+    }
+    .header.banner {
+        height: 0 !important;
+        margin-bottom: 7%;
+    }
+</style>
+<div style="margin-top: 130px;" class="mx-auto w-50 bg-body-tertiary px-5 pt-5 pb-4 border border-2 border-light-subtle rounded-2 mb-5">
+    <h4 class="fs-4 text-center mb-4">Thay đổi mật khẩu </h4>
+    <form  name="form" >
+        <label for="">Mật khẩu cũ</label>
+        <input name="pass" ng-model="pass" ng-required="true" type="text" placeholder="Mật khẩu cũ"
+            class="bg-body-secondary border-0 rounded-3 px-4 py-3 fs-6 w-100 mt-3 mb-2"> <br>
+        <p class="mb-2 form_error" ng-show="form.pass.$error.required && form.pass.$dirty">Vui lòng nhập mật khẩu cũ</p>
+
+        <label class="mt-3" for="">Mật khẩu mới</label>
+        <input name="repass" ng-model="password" ng-required="true" type="text"
+            placeholder="Mật khẩu mới" class="bg-body-secondary border-0 rounded-3 px-4 py-3 fs-6 w-100 mb-2 mt-3"> <br>
+        <p class="form_error mb-2" ng-show="form.repass.$error.required && form.repass.$dirty">Vui lòng nhập lại mật
+            khẩu mới</p>
+        <!-- <p class="form_error" ng-show="displayError">Mật khẩu không khớp nhau</p> -->
+
+        <div class="d-flex justify-content-center">
+            <button ng-disabled="form.$invalid" class="btn btn-danger mt-4 rounded-3 py-2 w-20" ng-click="changePass()">Đổi mật
+                khẩu</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,72 @@
+<style>
+    .box_search {
+        display: none !important;
+    }
+
+    .header.banner {
+        height: 0 !important;
+        margin-bottom: 7%;
+    }
+</style>
+<div style="margin-top: 110px;"
+    class="w-50 mb-5 mx-auto bg-body-tertiary px-5 pt-4 pb-4 border border-2 border-light-subtle rounded-2">
+    <h4 class="fs-4 text-center mb-3">Chỉnh sửa thông tin cá nhân</h4>
+    <form name="form">
+        <label for="">Họ tên:</label>
+        <input type="text" required placeholder="Họ tên" name="fullname" ng-model="info.fullname"
+            class="bg-body-secondary border-0 rounded-3 px-4 py-3 fs-6 w-100 mt-2 mb-3">
+        <p class="mb-3 form_error" ng-show="form.fullname.$error.required && form.fullname.$dirty">Vui lòng nhập
+            họ tên</p>
+
+        <label for="">Tên đăng nhập:</label>
+        <input type="text" required placeholder="Họ tên" name="username" ng-model="info.username"
+            class="bg-body-secondary border-0 rounded-3 px-4 py-3 fs-6 w-100 mt-2 mb-3">
+        <p class="mb-3 form_error" ng-show="form.username.$error.required && form.username.$dirty">Vui
+            lòng nhập tên đăng nhập</p>
+
+        <label for="">Email:</label>
+        <input type="email" required placeholder="Email" name="email" ng-model="info.email"
+            class="bg-body-secondary border-0 rounded-3 px-4 py-3 fs-6 w-100 mt-2 mb-3">
+        <p class="mb-3 form_error" ng-show="form.email.$error.required && form.email.$dirty">Vui
+            lòng nhập email</p>
+        <p class="mb-3 form_error" ng-show="form.email.$error.email && form.email.$dirty">Email không đúng định
+            dạng</p>
+
+        <div class="d-flex align-items-center ">
+            <label for="">Giới tính:</label>
+            <div class="form-check d-flex align-items-center mx-3">
+                <input class="form-check-input" type="radio" name="gender" ng-model="info.gender" value="true">
+                <label class="form-check-label mx-2">
+                    Nam
+                </label>
+            </div>
+            <div class="form-check d-flex align-items-center">
+                <input class="form-check-input" type="radio" name="gender" ng-model="info.gender" value="false">
+                <label class="form-check-label mx-2">
+                    Nữ
+                </label>
+            </div>
+        </div> <br>
+
+        <label for="">Ngày sinh:</label>
+        <input type="text" required name="birthday" placeholder="Ngày sinh" ng-model="info.birthday"
+            pattern="(^0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-(\d{4}$)"
+            class="bg-body-secondary border-0 rounded-3 px-4 py-3 fs-6 w-100 mt-2 mb-3">
+        <p class="mb-3 form_error" ng-show="form.birthday.$error.required && form.birthday.$dirty">Vui
+            lòng nhập ngày sinh</p>
+        <p class="mb-3 form_error" ng-show="form.birthday.$error.pattern">Vui
+            lòng nhập đúng định dạng ngày sinh dd-mm-yyyy</p>
+
+        <label for="">Học phí:</label>
+        <input type="text" placeholder="Học phí" ng-disabled="true" ng-model="info.schoolfee"
+            class="bg-body-secondary border-0 rounded-3 px-4 py-3 fs-6 w-100 mt-2 mb-3">
+
+        <label for="">Điểm:</label>
+        <input type="text" placeholder="Điểm" ng-disabled="true" ng-model="info.marks"
+            class="bg-body-secondary border-0 rounded-3 px-4 py-3 fs-6 w-100 mt-2 mb-3">
+
+        <div class="d-flex justify-content-center">
+            <button class="btn btn-danger  rounded-3 py-2 w-20" ng-click="updateInfo()">Sửa thông tin</button>
+        </div>
+    </form>
+</div>
